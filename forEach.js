@@ -115,7 +115,7 @@ function init() {
 
     // console.log(people.findIndex('Charles Darwin'))
 
-    people.forEach(function (person, index) {
+    people.forEach(function (person, index, people) {
         if (person.firstName === "Charles" && person.lastName === "Darwin") {
             console.log(index)
         }
