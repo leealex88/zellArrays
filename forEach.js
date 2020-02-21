@@ -113,7 +113,13 @@ function init() {
 
     // 4. Find index of Charles Darwin in the array. 
 
-    console.log(people.indexOf('Charles Darwin'))
+    // console.log(people.findIndex('Charles Darwin'))
+
+    people.forEach(function (person, index) {
+        if (person.firstName === "Charles" && person.lastName === "Darwin") {
+            console.log(index)
+        }
+    })
 
 }
 window.addEventListener('DOMContentLoaded', init)
