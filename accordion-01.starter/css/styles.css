@@ -1,3 +1,7 @@
+.element {
+  background-color: red
+}
+
 :root {
   --link-color: #2900b4;
   --link-color-dark: #190070;
@@ -105,7 +109,7 @@ a:active {
 }
 
 /* Indicators */
-.accordion__indicator > * {
+.accordion__indicator>* {
   width: 1rem;
 }
 
@@ -127,7 +131,7 @@ a:active {
 
 /* Accordion content */
 .accordion__content {
-  display: grid;
+  display: none;
   grid-template-columns: 7.5em 1fr;
   grid-column-gap: 1.5em;
   align-items: center;
@@ -139,4 +143,16 @@ a:active {
 .accordion__content svg {
   width: 10em;
   max-width: 100%;
+}
+
+.accordion.is-open .accordion__content {
+  display: grid;
+}
+
+.accordion.is-open .indicator__minus {
+  display: block;
+}
+
+.accordion.is-open .indicator__plus {
+  display: none;
 }
